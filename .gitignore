@@ -23,11 +23,8 @@ build/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
-<<<<<<< Updated upstream
 .idea
 .gradle
-=======
+
 # discord token java file so you don't actually commit it
 src/main/java/com/AdityaKompella/DiscordToken.java
->>>>>>> Stashed changes
