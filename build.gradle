@@ -1,19 +1,24 @@
 plugins {
-    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+mainClassName = 'com.AdityaKompella.Bot'
+
+version '1.0'
+def jdaVersion = '5.0.0-alpha.3'
+
+sourceCompatibility = targetCompatibility = 11
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://m2.dv8tion.net/releases"
+    }
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation("net.dv8tion:JDA:$jdaVersion")
 }
 
-test {
-    useJUnitPlatform()
-}
+compileJava.options.encoding = 'UTF-8'
